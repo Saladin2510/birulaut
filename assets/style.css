@@ -1,0 +1,86 @@
+/* ===============================
+   GLOBAL FONT
+================================ */
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* ===============================
+   COLOR VARIABLES
+================================ */
+:root {
+  --color-primary: #457B9D;
+  --color-primary-dark: #3b6a88;
+  --color-white: #ffffff;
+  --color-text-dark: #1f2937; /* gray-800 */
+}
+
+/* ===============================
+   NAVBAR
+================================ */
+.navbar.scrolled #nav-container {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+}
+
+.navbar.scrolled a {
+  color: var(--color-text-dark);
+}
+
+.navbar.scrolled a:hover {
+  color: var(--color-primary);
+}
+
+/* ===============================
+   LINKS
+================================ */
+a {
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-primary);
+}
+
+/* ===============================
+   BUTTONS
+================================ */
+.btn-primary,
+#ctaBtn {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn-primary:hover,
+#ctaBtn:hover {
+  background-color: var(--color-primary-dark);
+}
+
+/* ===============================
+   TEXT UTILITIES
+================================ */
+.text-primary {
+  color: var(--color-primary);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+/* ===============================
+   SECTION SPACING (OPTIONAL)
+================================ */
+section {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* SPIN ANIMATION */
+/* @keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+} */
