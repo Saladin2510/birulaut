@@ -11,8 +11,10 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -30,9 +32,7 @@
            text-white transition-all duration-300 flex-wrap">
 
             <!-- Logo -->
-            <img src="./assets/images/logo.svg" alt="Logo" class="w-14 h-14 md:w-16 md:h-16" />
-            <!-- <div class="flex items-center bg-white rounded-b-lg px-2">
-            </div> -->
+            <img src="./assets/images/logo.svg" alt="Logo" class="w-14 h-14 md:w-16 md:h-16 reveal" />
 
             <!-- Hamburger -->
             <button id="hamburger" class="md:hidden text-white transition-transform duration-300"
@@ -49,11 +49,11 @@
                 <div class="flex flex-col md:flex-row gap-6 text-sm font-medium
                text-gray-800 md:text-white">
 
-                    <a href="#home" class="hover:text-[#457B9D] transition">Home</a>
-                    <a href="#what" class="hover:text-[#457B9D] transition">What</a>
-                    <a href="#inovation" class="hover:text-[#457B9D] transition">Inovation</a>
-                    <a href="#project" class="hover:text-[#457B9D] transition">Project Plans</a>
-                    <a href="#blog" class="hover:text-[#457B9D] transition">BLOG</a>
+                    <a href="#home" class="hover:text-[#457B9D] transition reveal delay-1">Home</a>
+                    <a href="#what" class="hover:text-[#457B9D] transition reveal delay-2">What</a>
+                    <a href="#inovation" class="hover:text-[#457B9D] transition reveal delay-3">Inovation</a>
+                    <a href="#project" class="hover:text-[#457B9D] transition reveal delay-4">Project Plans</a>
+                    <a href="#blog" class="hover:text-[#457B9D] transition reveal delay-5">BLOG</a>
                 </div>
             </div>
 
@@ -78,17 +78,17 @@
             <div class="relative z-10 h-full flex items-end">
                 <div class="max-w-7xl px-10 md:px-16 pb-25 md:pb-45">
 
-                    <h1 class="text-white text-4xl md:text-6xl font-bold mb-4 leading-tight">
+                    <h1 class="text-white text-4xl md:text-6xl font-bold mb-4 leading-tight reveal delay-1">
                         Indonesia Blue Carbon
                     </h1>
 
-                    <p class="text-white/90 max-w-xl text-base md:text-lg mb-8">
+                    <p class="text-white/90 max-w-xl text-base md:text-lg mb-8 reveal delay-2">
                         Support our initiative to protect coastal ecosystems and mitigate climate change.
                     </p>
 
                     <!-- CTA Button -->
                     <button id="ctaBtn"
-                        class="inline-flex items-center gap-2 text-white font-semibold px-8 py-4 rounded-xl transition duration-300 shadow-lg">
+                        class="inline-flex items-center gap-2 text-white font-semibold px-8 py-4 rounded-xl transition duration-300 shadow-lg reveal delay-3">
                         See More
                         <span>→</span>
                     </button>
@@ -109,16 +109,16 @@
 
                         <!-- Logo -->
                         <img src="./assets/images/logo.svg" alt="Blue Carbon Logo"
-                            class="w-18 h-18 mb-6 animate-spin-slow">
+                            class="w-18 h-18 mb-6 animate-spin-slow reveal">
 
                         <!-- Title -->
-                        <h2 class="text-3xl md:text-4xl font-bold leading-tight mb-6">
+                        <h2 class="text-3xl md:text-4xl font-bold leading-tight mb-6 reveal delay-1">
                             A Global Carbon Storage<br>
                             Powerhouse
                         </h2>
 
                         <!-- Paragraph 1 -->
-                        <p class="text-white/80 text-sm md:text-base max-w-xl mb-5">
+                        <p class="text-white/80 text-sm md:text-base max-w-xl mb-5 reveal delay-2">
                             Blue Carbon refers to the carbon captured and stored by coastal and marine
                             ecosystems such as mangroves and seagrass. As the world's largest archipelagic
                             nation with the second-longest coastline, Indonesia plays a critical role as a
@@ -126,7 +126,7 @@
                         </p>
 
                         <!-- Paragraph 2 -->
-                        <p class="text-white/80 text-sm md:text-base max-w-xl">
+                        <p class="text-white/80 text-sm md:text-base max-w-xl reveal delay-3">
                             These ecosystems are exceptionally efficient at removing carbon dioxide (CO₂)
                             from the atmosphere—often outperforming terrestrial tropical forests by a wide
                             margin.
@@ -137,28 +137,28 @@
 
                             <!-- Chip 1 -->
                             <div
-                                class="flex items-center gap-3 px-4 py-2 rounded-lg bg-[#457B9D] font-medium backdrop-blur text-white text-sm">
+                                class="flex items-center gap-3 px-4 py-2 rounded-lg bg-[#457B9D] font-medium backdrop-blur text-white text-sm reveal delay-5">
                                 <img src="./assets/images/chips/1.svg" alt="Mangroves" class="w-5 h-5">
                                 <span>Mangroves</span>
                             </div>
 
                             <!-- Chip 2 -->
                             <div
-                                class="flex items-center gap-3 px-4 py-2 rounded-lg bg-[#457B9D] font-medium backdrop-blur text-white text-sm">
+                                class="flex items-center gap-3 px-4 py-2 rounded-lg bg-[#457B9D] font-medium backdrop-blur text-white text-sm reveal delay-5">
                                 <img src="./assets/images/chips/2.svg" alt="Seagrass" class="w-5 h-5">
                                 <span>Seagrass</span>
                             </div>
 
                             <!-- Chip 3 -->
                             <div
-                                class="flex items-center gap-3 px-4 py-2 rounded-lg bg-[#457B9D] font-medium backdrop-blur text-white text-sm">
+                                class="flex items-center gap-3 px-4 py-2 rounded-lg bg-[#457B9D] font-medium backdrop-blur text-white text-sm reveal delay-6">
                                 <img src="./assets/images/chips/3.svg" alt="Sediments" class="w-5 h-5">
                                 <span>Sediments</span>
                             </div>
 
                             <!-- Chip 4 -->
                             <div
-                                class="flex items-center gap-3 px-4 py-2 rounded-lg bg-[#457B9D] font-medium backdrop-blur text-white text-sm">
+                                class="flex items-center gap-3 px-4 py-2 rounded-lg bg-[#457B9D] font-medium backdrop-blur text-white text-sm reveal delay-6">
                                 <img src="./assets/images/chips/4.svg" alt="Indonesia" class="w-5 h-5">
                                 <span>Indonesia</span>
                             </div>
@@ -169,7 +169,7 @@
                     </div>
 
                     <!-- RIGHT TABLE CARD -->
-                    <div class="relative self-center">
+                    <div class="relative self-center reveal delay-4">
 
                         <!-- Accent Border (optional, like image) -->
                         <div class="absolute -right-3 -bottom-3 w-full h-full border-4 border-[#457B9D] rounded-xl">
@@ -263,12 +263,13 @@
             <div class="max-w-6xl mx-auto px-6 text-center text-white">
 
                 <!-- Title -->
-                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 reveal">
                     Indonesia’s Blue Carbon at Risk
                 </h2>
 
                 <!-- Description -->
-                <p class="text-white/80 max-w-4xl mx-auto text-sm md:text-base leading-relaxed mb-14"> Indonesia’s
+                <p class="text-white/80 max-w-4xl mx-auto text-sm md:text-base leading-relaxed mb-14 reveal delay-1">
+                    Indonesia’s
                     mangrove and seagrass ecosystems represent a globally significant blue carbon reserve, accounting
                     for approximately <strong>17% of the world’s total stock</strong>. However, this natural asset is
                     under severe threat, as large-scale conversion— particularly for shrimp aquaculture—has driven the
@@ -276,7 +277,7 @@
                 </p>
 
                 <!-- MAP CARD -->
-                <div class="flex justify-center">
+                <div class="flex justify-center reveal delay-2 no-reveal-hover">
                     <div id="openMapModal" class="cursor-pointer bg-white rounded-2xl p-2 shadow-xl
                        hover:scale-[1.01] transition">
 
@@ -287,7 +288,7 @@
 
                 <!-- CTA TEXT -->
                 <p id="openMapModalText"
-                    class="mt-6 text-sm text-white/70 underline cursor-pointer hover:text-white transition">
+                    class="mt-6 text-sm text-white/70 underline cursor-pointer hover:text-white transition reveal delay-3">
                     click on the map for more details
                 </p>
             </div>
@@ -302,12 +303,14 @@
             <div class="mx-auto px-6 md:px-12 ">
                 <div class="text-center py-15 mb-12">
                     <!-- Title -->
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 reveal">
                         Blue Carbon Initiative
                     </h2>
 
                     <!-- Description -->
-                    <p class="text-black/80 max-w-4xl mx-auto text-sm md:text-base leading-relaxed mb-14"> Ecosystem
+                    <p
+                        class="text-black/80 max-w-4xl mx-auto text-sm md:text-base leading-relaxed mb-14 reveal delay-1">
+                        Ecosystem
                         protection does not always hinder development and investment. Now is the time for development
                         and investment to actively protect ecosystems to ensure their own long-term
                         sustainability—through tangible contributions and active participation in climate change
@@ -321,15 +324,15 @@
 
                         <!-- Logo -->
                         <img src="./assets/images/logo-dark.svg" alt="Blue Carbon Logo"
-                            class="w-18 h-18 mb-6 animate-spin-slow text-black">
+                            class="w-18 h-18 mb-6 animate-spin-slow text-black reveal delay-2">
 
                         <!-- Title -->
-                        <h2 class="text-3xl md:text-4xl font-bold leading-tight mb-6">
+                        <h2 class="text-3xl md:text-4xl font-bold leading-tight mb-6 reveal delay-3">
                             Collaboration and Action
                         </h2>
 
                         <!-- Paragraph 1 -->
-                        <p class="text-black/80 text-sm md:text-base max-w-xl mb-5">
+                        <p class="text-black/80 text-sm md:text-base max-w-xl mb-5 reveal delay-4">
                             Join us in collaborating to protect, restore, and expand mangrove forests, seagrass meadows,
                             coral reefs, and coastal wetlands—while transforming these ecosystems into spaces for
                             community-driven economic growth.
@@ -340,7 +343,7 @@
                     <div class="relative self-center">
 
                         <!-- MAP CARD -->
-                        <div class="flex justify-center">
+                        <div class="flex justify-center reveal delay-5">
                             <img src="./assets/images/section/1.svg" alt="Indonesia Blue Carbon Map" class="max-w-full">
                         </div>
                     </div>
@@ -358,12 +361,12 @@
                     <div class="text-black">
 
                         <!-- Title -->
-                        <h2 class="text-3xl md:text-4xl font-bold leading-tight mb-6">
+                        <h2 class="text-3xl md:text-4xl font-bold leading-tight mb-6 reveal">
                             Contact Us :
                         </h2>
 
                         <!-- Paragraph 1 -->
-                        <p class="text-black/80 text-sm md:text-base max-w-xl mb-5">
+                        <p class="text-black/80 text-sm md:text-base max-w-xl mb-5 reveal delay-1">
                             We are ready to support you in exploring blue carbon projects that protect ecosystems,
                             address climate change, and empower local communities—while ensuring long-term
                             sustainability. Contact us to learn more.
@@ -375,13 +378,13 @@
                             <!-- WhatsApp -->
                             <div class="flex items-center gap-4">
                                 <div
-                                    class="flex items-center justify-center gap-2 bg-[#4A7DA1] text-white px-4 py-2 rounded-lg text-sm font-medium w-32">
+                                    class="flex items-center justify-center gap-2 bg-[#4A7DA1] text-white px-4 py-2 rounded-lg text-sm font-medium w-32 reveal delay-2">
                                     <img src="./assets/images/contact/person.svg" alt="icon person contact"
                                         class="w-4 h-4 shrink-0">
                                     ROY
                                 </div>
 
-                                <span class="text-black text-sm md:text-base">
+                                <span class="text-black text-sm md:text-base reveal delay-3">
                                     WA : +628121020813
                                 </span>
                             </div>
@@ -389,13 +392,13 @@
                             <!-- Email -->
                             <div class="flex items-center gap-4">
                                 <div
-                                    class="flex items-center justify-center gap-2 bg-[#4A7DA1] text-white px-4 py-2 rounded-lg text-sm font-medium w-32">
+                                    class="flex items-center justify-center gap-2 bg-[#4A7DA1] text-white px-4 py-2 rounded-lg text-sm font-medium w-32 reveal delay-4">
                                     <img src="./assets/images/contact/mail.svg" alt="icon mail contact"
                                         class="w-4 h-4 shrink-0">
                                     Email
                                 </div>
 
-                                <span class="text-black text-sm md:text-base">
+                                <span class="text-black text-sm md:text-base reveal delay-5">
                                     birulaut@birulaut.net
                                 </span>
                             </div>
@@ -408,7 +411,7 @@
                     <div class="relative self-center">
 
                         <!-- CONTACT IMAGE -->
-                        <div class="flex justify-center">
+                        <div class="flex justify-center reveal delay-6">
                             <img src="./assets/images/contact/1.svg" alt="Indonesia Blue Carbon Map" class="max-w-full">
                         </div>
                     </div>
@@ -417,6 +420,7 @@
             </div>
         </section>
 
+        <!-- SECTION : Hook Image -->
         <section id="hookimage" class="w-full pt-20">
             <img src="./assets/images/hook/1.svg" alt="hook image" class="w-full object-cover">
         </section>
@@ -429,12 +433,12 @@
 
                     <!-- LEFT -->
                     <div>
-                        <h1 class="text-4xl md:text-7xl font-bold leading-tight mb-6">#BiruLautku</h1>
+                        <h1 class="text-4xl md:text-7xl font-bold leading-tight mb-6 roboto reveal">#BiruLautku</h1>
 
                         <div class="text-sm space-y-1">
-                            <p class="font-semibold uppercase tracking-wide">Contact:</p>
-                            <p>+628121020813</p>
-                            <p>birulaut@birulaut.net</p>
+                            <p class="font-semibold uppercase tracking-wide reveal delay-1">Contact:</p>
+                            <p class="reveal delay-2">+628121020813</p>
+                            <p class="reveal delay-3">birulaut@birulaut.net</p>
                         </div>
 
 
@@ -444,18 +448,20 @@
                     <div class="flex flex-col items-start md:items-end gap-6">
 
                         <!-- Logo -->
-                        <img src="./assets/images/logo.svg" alt="Blue Carbon Logo" class="w-18 h-18 animate-spin-slow">
+                        <img src="./assets/images/logo.svg" alt="Blue Carbon Logo"
+                            class="w-18 h-18 animate-spin-slow reveal">
 
                         <!-- Subscribe -->
                         <div class="text-right">
-                            <p class="text-sm mb-3">
+                            <p class="text-sm mb-3 reveal delay-1">
                                 Support coastal ecosystem protection with us.
                             </p>
 
                             <div class="flex items-center gap-3">
                                 <input type="email" placeholder="Your email"
-                                    class="px-4 py-2 rounded-md text-black text-sm focus:outline-none bg-white" />
-                                <button class="bg-[#4C7EA1] hover:bg-[#3b6d8f] px-4 py-2 rounded-md text-sm transition">
+                                    class="px-4 py-2 rounded-md text-black text-sm focus:outline-none bg-white reveal delay-2" />
+                                <button
+                                    class="bg-[#4C7EA1] hover:bg-[#3b6d8f] px-4 py-2 rounded-md text-sm transition reveal delay-3">
                                     Subscribe
                                 </button>
                             </div>
@@ -466,19 +472,19 @@
 
                             <!-- Instagram -->
                             <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer"
-                                class="hover:text-white/70 transition">
+                                class="hover:text-white/70 transition reveal delay-4">
                                 <i class="fa-brands fa-instagram text-3xl"></i>
                             </a>
 
                             <!-- LinkedIn -->
                             <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer"
-                                class="hover:text-white/70 transition">
+                                class="hover:text-white/70 transition reveal delay-5">
                                 <i class="fa-brands fa-linkedin text-3xl"></i>
                             </a>
 
                             <!-- YouTube -->
                             <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer"
-                                class="hover:text-white/70 transition">
+                                class="hover:text-white/70 transition reveal delay-6">
                                 <i class="fa-brands fa-youtube text-3xl"></i>
                             </a>
 
