@@ -88,40 +88,6 @@ document.querySelectorAll("#menu-items a").forEach(link => {
     });
 });
 
-document.getElementById('ctaBtn').addEventListener('click', () => {
-    document.getElementById('nextSection').scrollIntoView({
-        behavior: 'smooth'
-    });
-});
-
-const mapModal = document.getElementById('mapModal');
-const openMapModal = document.getElementById('openMapModal');
-const openMapModalText = document.getElementById('openMapModalText');
-const closeMapModal = document.getElementById('closeMapModal');
-
-openMapModal.addEventListener('click', () => {
-    mapModal.classList.remove('hidden');
-    mapModal.classList.add('flex');
-});
-
-openMapModalText.addEventListener('click', () => {
-    mapModal.classList.remove('hidden');
-    mapModal.classList.add('flex');
-});
-
-closeMapModal.addEventListener('click', () => {
-    mapModal.classList.add('hidden');
-    mapModal.classList.remove('flex');
-});
-
-// Close when clicking outside
-mapModal.addEventListener('click', (e) => {
-    if (e.target === mapModal) {
-        mapModal.classList.add('hidden');
-        mapModal.classList.remove('flex');
-    }
-});
-
 // Scroll Reveal Observer
 const reveals = document.querySelectorAll(".reveal");
 
