@@ -10,15 +10,6 @@ document.addEventListener("scroll", () => {
         } else {
             navbar.style.transform = "translateY(0)";
         }
-
-        // Glass effect tetap jalan
-        if (currentScrollY > 50) {
-            navbar.classList.add("bg-white", "border-white/20", "shadow-md");
-            navbar.classList.remove("bg-gradient-to-b", "from-black/50", "to-transparent", "md:text-white");
-        } else {
-            navbar.classList.remove("bg-white", "border-white/20", "shadow-md");
-            navbar.classList.add("bg-gradient-to-b", "from-black/50", "to-transparent", "md:text-white");
-        }
     });
 
     lastScrollY = currentScrollY;
