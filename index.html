@@ -25,17 +25,19 @@
 
 <body>
     <!-- Navbar -->
-    <nav id="navbar" class="navbar fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-
-        <div id="nav-container" class="flex items-center justify-between w-full px-7 md:px-24 py-4
-           bg-gradient-to-b from-black/50 to-transparent transition-all duration-300 flex-wrap">
+    <nav id="navbar"
+        class="navbar fixed top-0 left-0 right-0 z-50 flex justify-center p-0 md:text-white transition-all duration-300">
+        <div id="nav-container"
+            class="flex items-center justify-between w-full px-7 md:px-24 bg-transparent transition-all duration-300 flex-wrap">
 
             <!-- Logo -->
-            <img src="./assets/images/logo.svg" alt="Logo" class="w-14 h-14 md:w-16 md:h-16 reveal" />
+            <img src="./assets/images/logo-dark.svg" alt="Logo BiruLaut" class="w-14 h-14 md:w-16 md:h-16 my-2 reveal" />
 
             <!-- Hamburger -->
-            <button id="hamburger" class="md:hidden transition-transform duration-300" onclick="toggleMenu()">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 -960 960 960"
+            <button id="hamburger"
+                class="transition-transform duration-300 ease-[cubic-bezier(0.16, 1, 0.3, 1)] md:hidden"
+                onclick="toggleMenu()">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 -960 960 960"
                     fill="currentColor">
                     <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
                 </svg>
@@ -44,7 +46,7 @@
             <!-- Menu -->
             <div id="menu-items" class="hidden w-full md:flex md:w-auto md:items-center md:gap-10 mt-6 md:mt-0">
 
-                <div class="flex flex-col md:flex-row gap-6 text-sm font-medium">
+              <div class="flex flex-col md:flex-row gap-6 text-sm font-medium md:items-center pb-5 md:pb-0">
 
                     <a href="#home" data-en="Home" data-id="Beranda"
                         class="lang-target hover:text-[#457B9D] transition reveal delay-1">Home</a>
@@ -57,7 +59,7 @@
                     <a href="#blog" data-en="BLOG" data-id="BLOG"
                         class="lang-target hover:text-[#457B9D] transition reveal delay-5">BLOG</a>
 
-                    <div class="lang-switch flex items-center gap-2 pl-4 ml-2">
+                    <div class="lang-switch flex items-center gap-2 md:pl-4 md:ml-2 reveal delay-6">
                         <button onclick="changeLanguage('id')" id="btn-id"
                             class="cursor-pointer hover:text-[#457B9D] text-xs opacity-50 transition">ID</button>
                         <span class="lang-switch text-xs opacity-30">|</span>

@@ -17,47 +17,11 @@
   --color-primary-dark: #3b6a88;
   --color-white: #ffffff;
   --color-text-dark: #1f2937;
-  /* gray-800 */
 }
 
 /* ===============================
    NAVBAR
 ================================ */
-/* #navbar a {
-  color: white;
-  transition: color 0.3s ease;
-}
-
-#navbar a:hover {
-  color: #457B9D;
-}
-
-#navbar.navbar--light a {
-  color: #1f2937;
-}
-
-#navbar.navbar--light a:hover {
-  color: #457B9D;
-}
-
-#navbar .lang-switch button {
-  color: white;
-  transition: color 0.3s ease, opacity 0.3s ease;
-}
-
-#navbar.navbar--light .lang-switch button {
-  color: #1f2937;
-}
-
-#navbar .lang-switch span {
-  color: white;
-  transition: color 0.3s ease, opacity 0.3s ease;
-}
-
-#navbar.navbar--light .lang-switch span  {
-  color: #1f2937;
-} */
-
 .navbar.scrolled #nav-container {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(8px);

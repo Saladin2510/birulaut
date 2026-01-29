@@ -1,72 +1,25 @@
 let lastScrollY = window.scrollY;
 
-// Scroll behavior
-window.addEventListener("scroll", () => {
-    const navbar = document.getElementById("navbar");
-    const navContainer = document.getElementById("nav-container");
-    const menuLinks = navContainer.querySelectorAll("a");
-    const hamburger = document.getElementById("hamburger");
-
+document.addEventListener("scroll", () => {
     const currentScrollY = window.scrollY;
 
-    // Hide on scroll down
-    if (currentScrollY > lastScrollY && currentScrollY > 80) {
-        navbar.style.transform = "translateY(-100%)";
-    } else {
-        navbar.style.transform = "translateY(0)";
-    }
+    document.querySelectorAll(".navbar").forEach(navbar => {
+        // Hide saat scroll down, show saat scroll up
+        if (currentScrollY > lastScrollY && currentScrollY > 50) {
+            navbar.style.transform = "translateY(-100%)";
+        } else {
+            navbar.style.transform = "translateY(0)";
+        }
 
-    // Navbar style switch
-    if (currentScrollY > 80) {
-        // navbar.classList.add("navbar--light");
-        // navContainer.classList.add("bg-white", "shadow-md");
-        navContainer.classList.remove(
-            "bg-gradient-to-b",
-            "from-black/50",
-            "to-transparent",
-            "text-white"
-        );
-        navContainer.classList.add(
-            "bg-white",
-            "shadow-md",
-            "text-gray-800"
-        );
-
-        menuLinks.forEach(link => {
-            link.classList.remove("md:text-white");
-            link.classList.add("md:text-gray-800");
-        });
-
-        hamburger.classList.remove("text-white");
-        hamburger.classList.add("text-gray-800");
-        //     "to-transparent"
-        // );
-        // hamburger.classList.replace("text-white", "text-gray-800");
-    } else {
-        // navbar.classList.remove("navbar--light");
-        // navContainer.classList.remove("bg-white", "shadow-md");
-        navContainer.classList.add(
-            "bg-gradient-to-b",
-            "from-black/50",
-            "to-transparent",
-            "text-white"
-        );
-        navContainer.classList.remove(
-            "bg-white",
-            "shadow-md",
-            "text-gray-800"
-        );
-
-        menuLinks.forEach(link => {
-            link.classList.add("md:text-white");
-            link.classList.remove("md:text-gray-800");
-        });
-
-        hamburger.classList.remove("text-gray-800");
-        //     "to-transparent"
-        // );
-        // hamburger.classList.replace("text-gray-800", "text-white");
-    }
+        // Glass effect tetap jalan
+        if (currentScrollY > 50) {
+            navbar.classList.add("bg-white", "border-white/20", "shadow-md");
+            navbar.classList.remove("bg-gradient-to-b", "from-black/50", "to-transparent", "md:text-white");
+        } else {
+            navbar.classList.remove("bg-white", "border-white/20", "shadow-md");
+            navbar.classList.add("bg-gradient-to-b", "from-black/50", "to-transparent", "md:text-white");
+        }
+    });
 
     lastScrollY = currentScrollY;
 });
@@ -77,22 +30,28 @@ function toggleMenu() {
     const navContainer = document.getElementById("nav-container");
     const menuBtn = document.getElementById("hamburger");
 
-    const isOpen = !menu.classList.contains("hidden");
+    const menuIcon = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>`;
+    const closeIcon = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>`;
 
-    menu.classList.toggle("hidden");
+    const isOpen = !menu.classList.contains('hidden');
 
-    // Mobile background
-    navContainer.classList.toggle("bg-white", !isOpen);
-    navContainer.classList.toggle("text-gray-800", !isOpen);
-    navContainer.classList.toggle("text-white", isOpen);
+    menu.classList.toggle('hidden');
+    navContainer.classList.toggle('bg-white');
 
-    menuBtn.classList.toggle("rotate-180");
+    // Rotate animation
+    menuBtn.classList.toggle('rotate-180');
+    menuBtn.classList.toggle('-rotate-180');
+
+    setTimeout(() => {
+        menuBtn.innerHTML = isOpen ? menuIcon : closeIcon;
+    }, 150);
 }
 
 // Auto close menu on link click (mobile only)
-document.querySelectorAll("#menu-items a").forEach(link => {
-    link.addEventListener("click", () => {
-        if (window.innerWidth < 768) {
+document.querySelectorAll('#menu-items a').forEach(link => {
+    link.addEventListener('click', () => {
+        const menu = document.getElementById('menu-items');
+        if (!menu.classList.contains('hidden')) {
             toggleMenu();
         }
     });
