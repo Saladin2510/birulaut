@@ -23,18 +23,51 @@
 /* ===============================
    NAVBAR
 ================================ */
-.navbar.scrolled #nav-container {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(8px);
+/* DEFAULT (navbar di atas hero / gelap) */
+#navbar a {
+  color: white;
+  transition: color 0.3s ease;
 }
 
-.navbar.scrolled a {
-  color: var(--color-text-dark);
+#navbar a:hover {
+  color: #457B9D;
 }
 
-.navbar.scrolled a:hover {
-  color: var(--color-primary);
+/* NAVBAR TERANG (setelah scroll) */
+#navbar.navbar--light a {
+  color: #1f2937;
+  /* gray-800 */
 }
+
+#navbar.navbar--light a:hover {
+  color: #457B9D;
+}
+
+/* DEFAULT (navbar gelap) */
+#navbar .lang-switch button {
+  color: white;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+/* NAVBAR TERANG (setelah scroll) */
+#navbar.navbar--light .lang-switch button {
+  color: #1f2937;
+  /* gray-800 */
+}
+
+/* DEFAULT (navbar gelap) */
+#navbar .lang-switch span {
+  color: white;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+/* NAVBAR TERANG (setelah scroll) */
+#navbar.navbar--light .lang-switch span  {
+  color: #1f2937;
+  /* gray-800 */
+}
+
+
 
 /* ===============================
    LINKS

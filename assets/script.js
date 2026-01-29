@@ -4,7 +4,6 @@ let lastScrollY = window.scrollY;
 window.addEventListener("scroll", () => {
     const navbar = document.getElementById("navbar");
     const navContainer = document.getElementById("nav-container");
-    const menuLinks = navContainer.querySelectorAll("a");
     const hamburger = document.getElementById("hamburger");
 
     const currentScrollY = window.scrollY;
@@ -16,46 +15,25 @@ window.addEventListener("scroll", () => {
         navbar.style.transform = "translateY(0)";
     }
 
-    // Change style after scroll
+    // Navbar style switch
     if (currentScrollY > 80) {
+        navbar.classList.add("navbar--light");
+        navContainer.classList.add("bg-white", "shadow-md");
         navContainer.classList.remove(
             "bg-gradient-to-b",
             "from-black/50",
-            "to-transparent",
-            "text-white"
+            "to-transparent"
         );
-        navContainer.classList.add(
-            "bg-white",
-            "shadow-md",
-            "text-gray-800"
-        );
-
-        menuLinks.forEach(link => {
-            link.classList.remove("md:text-white");
-            link.classList.add("md:text-gray-800");
-        });
-
-        hamburger.classList.remove("text-white");
-        hamburger.classList.add("text-gray-800");
+        hamburger.classList.replace("text-white", "text-gray-800");
     } else {
+        navbar.classList.remove("navbar--light");
+        navContainer.classList.remove("bg-white", "shadow-md");
         navContainer.classList.add(
             "bg-gradient-to-b",
             "from-black/50",
-            "to-transparent",
-            "text-white"
+            "to-transparent"
         );
-        navContainer.classList.remove(
-            "bg-white",
-            "shadow-md",
-            "text-gray-800"
-        );
-
-        menuLinks.forEach(link => {
-            link.classList.add("md:text-white");
-            link.classList.remove("md:text-gray-800");
-        });
-
-        hamburger.classList.remove("text-gray-800");
+        hamburger.classList.replace("text-gray-800", "text-white");
     }
 
     lastScrollY = currentScrollY;

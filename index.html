@@ -46,14 +46,26 @@
             <!-- Menu -->
             <div id="menu-items" class="hidden w-full md:flex md:w-auto md:items-center md:gap-10 mt-6 md:mt-0">
 
-                <div class="flex flex-col md:flex-row gap-6 text-sm font-medium
-               text-gray-800 md:text-white">
+                <div class="flex flex-col md:flex-row gap-6 text-sm font-medium">
 
-                    <a href="#home" class="hover:text-[#457B9D] transition reveal delay-1">Home</a>
-                    <a href="page/what.html" class="hover:text-[#457B9D] transition reveal delay-2">What</a>
-                    <a href="#inovation" class="hover:text-[#457B9D] transition reveal delay-3">Inovation</a>
-                    <a href="#project" class="hover:text-[#457B9D] transition reveal delay-4">Project Plans</a>
-                    <a href="#blog" class="hover:text-[#457B9D] transition reveal delay-5">BLOG</a>
+                    <a href="#home" data-en="Home" data-id="Beranda"
+                        class="lang-target hover:text-[#457B9D] transition reveal delay-1">Home</a>
+                    <a href="page/what.html" data-en="What" data-id="Apa itu"
+                        class="lang-target hover:text-[#457B9D] transition reveal delay-2">What</a>
+                    <a href="#inovation" data-en="Inovation" data-id="Inovasi"
+                        class="lang-target hover:text-[#457B9D] transition reveal delay-3">Inovation</a>
+                    <a href="#project" data-en="Project Plans" data-id="Rencana Proyek"
+                        class="lang-target hover:text-[#457B9D] transition reveal delay-4">Project Plans</a>
+                    <a href="#blog" data-en="BLOG" data-id="BLOG"
+                        class="lang-target hover:text-[#457B9D] transition reveal delay-5">BLOG</a>
+
+                    <div class="lang-switch flex items-center gap-2 pl-4 ml-2">
+                        <button onclick="changeLanguage('id')" id="btn-id"
+                            class="cursor-pointer hover:text-[#457B9D] text-xs opacity-50 transition">ID</button>
+                        <span class="lang-switch text-xs opacity-30">|</span>
+                        <button onclick="changeLanguage('en')" id="btn-en"
+                            class="cursor-pointer hover:text-[#457B9D] text-xs font-bold transition">EN</button>
+                    </div>
                 </div>
             </div>
 
@@ -78,17 +90,20 @@
             <div class="relative z-10 h-full flex items-end">
                 <div class="max-w-7xl px-10 md:px-16 pb-25 md:pb-45">
 
-                    <h1 class="text-white text-4xl md:text-6xl font-bold mb-4 leading-tight reveal delay-1">
+                    <h1 data-en="Indonesia Blue Carbon" data-id="Karbon Biru Indonesia"
+                        class="lang-target text-white text-4xl md:text-6xl font-bold mb-4 leading-tight reveal delay-1">
                         Indonesia Blue Carbon
                     </h1>
 
-                    <p class="text-white/90 max-w-xl text-base md:text-lg mb-8 reveal delay-2">
+                    <p data-en="Support our initiative to protect coastal ecosystems and mitigate climate change."
+                        data-id="Dukung inisiatif kami untuk melindungi ekosistem pesisir dan mengurangi dampak perubahan iklim."
+                        class="lang-target text-white/90 max-w-xl text-base md:text-lg mb-8 reveal delay-2">
                         Support our initiative to protect coastal ecosystems and mitigate climate change.
                     </p>
 
                     <!-- CTA Button -->
-                    <button id="ctaBtn"
-                        class="inline-flex items-center gap-2 text-white font-semibold px-8 py-4 rounded-xl transition duration-300 shadow-lg reveal delay-3">
+                    <button id="ctaBtn" data-en="See More" data-id="Lihat selengkapnya"
+                        class="lang-target inline-flex items-center gap-2 text-white font-semibold px-8 py-4 rounded-xl transition duration-300 shadow-lg reveal delay-3">
                         See More
                         <span>→</span>
                     </button>
@@ -112,24 +127,27 @@
                             class="w-18 h-18 mb-6 animate-spin-slow reveal">
 
                         <!-- Title -->
-                        <h2 class="text-3xl md:text-4xl font-bold leading-tight mb-6 reveal delay-1">
+                        <h2 data-en="A Global Carbon Storage Powerhouse" data-id="Pusat Penyimpanan Karbon Global"
+                            class="lang-target text-3xl md:text-4xl font-bold leading-tight mb-6 reveal delay-1">
                             A Global Carbon Storage<br>
                             Powerhouse
                         </h2>
 
                         <!-- Paragraph 1 -->
-                        <p class="text-white/80 text-sm md:text-base max-w-xl mb-5 reveal delay-2">
-                            Blue Carbon refers to the carbon captured and stored by coastal and marine
-                            ecosystems such as mangroves and seagrass. As the world's largest archipelagic
-                            nation with the second-longest coastline, Indonesia plays a critical role as a
-                            global blue carbon powerhouse.
+                        <p data-en="Blue Carbon refers to the carbon captured and stored by coastal and marine ecosystems such as mangroves and seagrass. As the world's largest archipelagic nation with the second-longest coastline, Indonesia plays a critical role as a global blue carbon powerhouse."
+                            data-id="Karbon Biru adalah karbon yang ditangkap dan disimpan oleh ekosistem pesisir dan laut, seperti hutan mangrove dan padang lamun. Sebagai negara kepulauan terbesar di dunia dengan garis pantai terpanjang kedua, Indonesia memegang peran strategis sebagai pusat kekuatan karbon biru global."
+                            class="lang-target text-white/80 text-sm md:text-base max-w-xl mb-5 reveal delay-2">Blue
+                            Carbon refers to the carbon captured and stored by coastal and marine ecosystems such as
+                            mangroves and seagrass. As the world's largest archipelagic nation with the second-longest
+                            coastline, Indonesia plays a critical role as a global blue carbon powerhouse.
                         </p>
 
                         <!-- Paragraph 2 -->
-                        <p class="text-white/80 text-sm md:text-base max-w-xl reveal delay-3">
-                            These ecosystems are exceptionally efficient at removing carbon dioxide (CO₂)
-                            from the atmosphere—often outperforming terrestrial tropical forests by a wide
-                            margin.
+                        <p data-en="These ecosystems are exceptionally efficient at removing carbon dioxide (CO₂) from the atmosphere—often outperforming terrestrial tropical forests by a wide margin."
+                            data-id="Ekosistem ini memiliki kemampuan luar biasa dalam menyerap karbon dioksida (CO₂) dari atmosfer—bahkan jauh lebih efektif dibandingkan hutan hujan tropis di daratan."
+                            class="lang-target text-white/80 text-sm md:text-base max-w-xl reveal delay-3">These
+                            ecosystems are exceptionally efficient at removing carbon dioxide (CO₂) from the
+                            atmosphere—often outperforming terrestrial tropical forests by a wide margin.
                         </p>
 
                         <!-- CHIPS -->
@@ -139,26 +157,26 @@
                             <div
                                 class="flex items-center gap-3 px-4 py-2 rounded-lg bg-[#457B9D] font-medium backdrop-blur text-white text-sm reveal delay-5">
                                 <img src="./assets/images/chips/1.svg" alt="Mangroves" class="w-5 h-5">
-                                <span>Mangroves</span>
+                                <span data-en="Mangroves" data-id="Mangrove" class="lang-target">Mangroves</span>
                             </div>
 
                             <!-- Chip 2 -->
                             <div
                                 class="flex items-center gap-3 px-4 py-2 rounded-lg bg-[#457B9D] font-medium backdrop-blur text-white text-sm reveal delay-5">
                                 <img src="./assets/images/chips/2.svg" alt="Seagrass" class="w-5 h-5">
-                                <span>Seagrass</span>
+                                <span data-en="Seagrass" data-id="Lamun" class="lang-target">Seagrass</span>
                             </div>
 
                             <!-- Chip 3 -->
                             <div
-                                class="flex items-center gap-3 px-4 py-2 rounded-lg bg-[#457B9D] font-medium backdrop-blur text-white text-sm reveal delay-6">
+                                class="lang-target flex items-center gap-3 px-4 py-2 rounded-lg bg-[#457B9D] font-medium backdrop-blur text-white text-sm reveal delay-6">
                                 <img src="./assets/images/chips/3.svg" alt="Sediments" class="w-5 h-5">
-                                <span>Sediments</span>
+                                <span data-en="Sediments" data-id="Sedimen Pesisir" class="lang-target">Sediments</span>
                             </div>
 
                             <!-- Chip 4 -->
                             <div
-                                class="flex items-center gap-3 px-4 py-2 rounded-lg bg-[#457B9D] font-medium backdrop-blur text-white text-sm reveal delay-6">
+                                class="lang-target flex items-center gap-3 px-4 py-2 rounded-lg bg-[#457B9D] font-medium backdrop-blur text-white text-sm reveal delay-6">
                                 <img src="./assets/images/chips/4.svg" alt="Indonesia" class="w-5 h-5">
                                 <span>Indonesia</span>
                             </div>
@@ -263,18 +281,21 @@
             <div class="max-w-6xl mx-auto px-6 text-center text-white">
 
                 <!-- Title -->
-                <h2 class="text-3xl md:text-4xl font-bold mb-6 reveal">
+                <h2 data-en="Indonesia’s Blue Carbon at Risk" data-id="Karbon Biru Indonesia dalam Ancaman"
+                    class="lang-target text-3xl md:text-4xl font-bold mb-6 reveal">
                     Indonesia’s Blue Carbon at Risk
                 </h2>
 
                 <!-- Description -->
-                <p class="text-white/80 max-w-4xl mx-auto text-sm md:text-base leading-relaxed mb-14 reveal delay-1">
-                    Indonesia’s
-                    mangrove and seagrass ecosystems represent a globally significant blue carbon reserve, accounting
-                    for approximately <strong>17% of the world’s total stock</strong>. However, this natural asset is
-                    under severe threat, as large-scale conversion— particularly for shrimp aquaculture—has driven the
-                    loss of an estimated <strong>40% of mangroves over the past three decades</strong>.
+                <p data-en="Indonesia’s mangrove and seagrass ecosystems represent a globally significant blue carbon reserve, accounting for approximately <strong>17% of the world’s total stock</strong>. However, this natural asset is under severe threat, as large-scale conversion— particularly for shrimp aquaculture—has driven the loss of an estimated <strong>40% of mangroves over the past three decades</strong>."
+                    data-id="Ekosistem mangrove dan lamun Indonesia merupakan cadangan karbon biru yang sangat signifikan secara global, mencakup sekitar <strong>17% dari total stok dunia</strong>. Namun, kekayaan alam ini berada dalam tekanan serius. Alih fungsi lahan dalam skala besar—terutama untuk tambak udang—telah menyebabkan hilangnya sekitar <strong>40% hutan mangrove Indonesia dalam tiga dekade terakhir</strong>."
+                    class="lang-target text-white/80 max-w-4xl mx-auto text-sm md:text-base leading-relaxed mb-14 reveal delay-1">
+                    Indonesia’s mangrove and seagrass ecosystems represent a globally significant blue carbon reserve,
+                    accounting for approximately <strong>17% of the world’s total stock</strong>. However, this natural
+                    asset is under severe threat, as large-scale conversion— particularly for shrimp aquaculture—has
+                    driven the loss of an estimated <strong>40% of mangroves over the past three decades</strong>.
                 </p>
+
 
                 <!-- MAP CARD -->
                 <div class="flex justify-center reveal delay-2 no-reveal-hover">
@@ -287,8 +308,9 @@
                 </div>
 
                 <!-- CTA TEXT -->
-                <p id="openMapModalText"
-                    class="mt-6 text-sm text-white/70 underline cursor-pointer hover:text-white transition reveal delay-3">
+                <p id="openMapModalText" data-en="click on the map for more details"
+                    data-id="Klik pada peta untuk melihat informasi lebih lengkap"
+                    class="lang-target mt-6 text-sm text-white/70 underline cursor-pointer hover:text-white transition reveal delay-3">
                     click on the map for more details
                 </p>
             </div>
@@ -303,18 +325,19 @@
             <div class="mx-auto px-6 md:px-12 ">
                 <div class="text-center py-15 mb-12">
                     <!-- Title -->
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6 reveal">
+                    <h2 data-en="Blue Carbon Initiative" data-id="Inisiatif Karbon Biru"
+                        class="lang-target text-3xl md:text-4xl font-bold mb-6 reveal">
                         Blue Carbon Initiative
                     </h2>
 
                     <!-- Description -->
-                    <p
-                        class="text-black/80 max-w-4xl mx-auto text-sm md:text-base leading-relaxed mb-14 reveal delay-1">
-                        Ecosystem
-                        protection does not always hinder development and investment. Now is the time for development
-                        and investment to actively protect ecosystems to ensure their own long-term
+                    <p data-en="Ecosystem protection does not always hinder development and investment. Now is the time for development and investment to actively protect ecosystems to ensure their own long-term sustainability—through tangible contributions and active participation in climate change mitigation."
+                        data-id="Perlindungan ekosistem tidak selalu menghambat pembangunan dan investasi. Saat ini, pembangunan dan investasi justru perlu berperan aktif dalam menjaga ekosistem demi keberlanjutan jangka panjang—melalui kontribusi nyata dan keterlibatan langsung dalam upaya mitigasi perubahan iklim."
+                        class="lang-target text-black/80 max-w-4xl mx-auto text-sm md:text-base leading-relaxed mb-14 reveal delay-1">
+                        Ecosystem protection does not always hinder development and investment. Now is the time for
+                        development and investment to actively protect ecosystems to ensure their own long-term
                         sustainability—through tangible contributions and active participation in climate change
-                        mitigation
+                        mitigation.
                     </p>
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -327,14 +350,17 @@
                             class="w-18 h-18 mb-6 animate-spin-slow text-black reveal delay-2">
 
                         <!-- Title -->
-                        <h2 class="text-3xl md:text-4xl font-bold leading-tight mb-6 reveal delay-3">
+                        <h2 data-en="Collaboration and Action" data-id="Kolaborasi dan Aksi"
+                            class="lang-target text-3xl md:text-4xl font-bold leading-tight mb-6 reveal delay-3">
                             Collaboration and Action
                         </h2>
 
                         <!-- Paragraph 1 -->
-                        <p class="text-black/80 text-sm md:text-base max-w-xl mb-5 reveal delay-4">
-                            Join us in collaborating to protect, restore, and expand mangrove forests, seagrass meadows,
-                            coral reefs, and coastal wetlands—while transforming these ecosystems into spaces for
+                        <p data-en="Join us in collaborating to protect, restore, and expand mangrove forests, seagrass meadows, coral reefs, and coastal wetlands—while transforming these ecosystems into spaces for community-driven economic growth."
+                            data-id="Mari berkolaborasi untuk melindungi, memulihkan, dan memperluas hutan mangrove, padang lamun, terumbu karang, serta lahan basah pesisir—sekaligus mengembangkan ekosistem ini sebagai ruang pertumbuhan ekonomi berbasis masyarakat."
+                            class="lang-target text-black/80 text-sm md:text-base max-w-xl mb-5 reveal delay-4">Join us
+                            in collaborating to protect, restore, and expand mangrove forests, seagrass meadows, coral
+                            reefs, and coastal wetlands—while transforming these ecosystems into spaces for
                             community-driven economic growth.
                         </p>
                     </div>
@@ -361,15 +387,18 @@
                     <div class="text-black">
 
                         <!-- Title -->
-                        <h2 class="text-3xl md:text-4xl font-bold leading-tight mb-6 reveal">
+                        <h2 data-en="Contact Us :" data-id="Hubungi Kami:"
+                            class="lang-target text-3xl md:text-4xl font-bold leading-tight mb-6 reveal">
                             Contact Us :
                         </h2>
 
                         <!-- Paragraph 1 -->
-                        <p class="text-black/80 text-sm md:text-base max-w-xl mb-5 reveal delay-1">
-                            We are ready to support you in exploring blue carbon projects that protect ecosystems,
-                            address climate change, and empower local communities—while ensuring long-term
-                            sustainability. Contact us to learn more.
+                        <p data-en="We are ready to support you in exploring blue carbon projects that protect ecosystems, address climate change, and empower local communities—while ensuring long-term sustainability. Contact us to learn more."
+                            data-id="Kami siap mendukung Anda dalam menjajaki proyek karbon biru yang melindungi ekosistem, menjawab tantangan perubahan iklim, serta memberdayakan masyarakat lokal—dengan tetap menjunjung keberlanjutan jangka panjang. Hubungi kami untuk informasi lebih lanjut."
+                            class="lang-target text-black/80 text-sm md:text-base max-w-xl mb-5 reveal delay-1">We are
+                            ready to support you in exploring blue carbon projects that protect ecosystems, address
+                            climate change, and empower local communities—while ensuring long-term sustainability.
+                            Contact us to learn more.
                         </p>
 
                         <!-- CONTACT CHIPS -->
@@ -436,7 +465,8 @@
                         <h1 class="text-4xl md:text-7xl font-bold leading-tight mb-6 roboto reveal">#BiruLautku</h1>
 
                         <div class="text-sm space-y-1">
-                            <p class="font-semibold uppercase tracking-wide reveal delay-1">Contact:</p>
+                            <p data-en="Contact:" data-id="Kontak:"
+                                class="lang-target font-semibold uppercase tracking-wide reveal delay-1">Contact:</p>
                             <p class="reveal delay-2">+628121020813</p>
                             <p class="reveal delay-3">birulaut@birulaut.net</p>
                         </div>
@@ -453,15 +483,18 @@
 
                         <!-- Subscribe -->
                         <div class="text-right">
-                            <p class="text-sm mb-3 reveal delay-1">
+                            <p data-en="Support coastal ecosystem protection with us."
+                                data-id="Dukung perlindungan ekosistem pesisir bersama kami."
+                                class="lang-target text-sm mb-3 reveal delay-1">
                                 Support coastal ecosystem protection with us.
                             </p>
 
                             <div class="flex items-center gap-3">
-                                <input type="email" placeholder="Your email"
+                                <input type="email" data-placeholder-en="Your email" data-placeholder-id="Email Anda"
+                                    placeholder="Your email"
                                     class="px-4 py-2 rounded-md text-black text-sm focus:outline-none bg-white reveal delay-2" />
-                                <button
-                                    class="bg-[#4C7EA1] hover:bg-[#3b6d8f] px-4 py-2 rounded-md text-sm transition reveal delay-3">
+                                <button data-en="Subscribe" data-id="Berlangganan"
+                                    class="lang-target bg-[#4C7EA1] hover:bg-[#3b6d8f] px-4 py-2 rounded-md text-sm transition reveal delay-3">
                                     Subscribe
                                 </button>
                             </div>
@@ -491,7 +524,8 @@
                         </div>
 
                     </div>
-                    <p class="text-sm text-white/70">
+                    <p data-en="© 2026. All rights reserved." data-id="© 2026. Seluruh hak cipta dilindungi."
+                        class="lang-target text-sm text-white/70">
                         © 2026. All rights reserved.
                     </p>
                 </div>
@@ -548,6 +582,57 @@
             if (e.target === mapModal) {
                 mapModal.classList.add('hidden');
                 mapModal.classList.remove('flex');
+            }
+        });
+
+        // --- LOGIC GANTI BAHASA ---
+        function changeLanguage(lang) {
+            // TEXT & HTML
+            document.querySelectorAll('.lang-target').forEach(el => {
+                const newText = el.getAttribute(`data-${lang}`);
+                if (newText) el.innerHTML = newText;
+            });
+
+            // PLACEHOLDER INPUT
+            document.querySelectorAll('input[data-placeholder-en]').forEach(input => {
+                const placeholder = input.getAttribute(`data-placeholder-${lang}`);
+                if (placeholder) input.placeholder = placeholder;
+            });
+
+            // BUTTON STYLE & HTML LANG (tetap)
+            const btnId = document.getElementById('btn-id');
+            const btnEn = document.getElementById('btn-en');
+
+            if (lang === 'id') {
+                btnId?.classList.add('font-bold', 'opacity-100');
+                btnId?.classList.remove('opacity-50');
+                btnEn?.classList.remove('font-bold', 'opacity-100');
+                btnEn?.classList.add('opacity-50');
+                document.documentElement.lang = "id";
+            } else {
+                btnEn?.classList.add('font-bold', 'opacity-100');
+                btnEn?.classList.remove('opacity-50');
+                btnId?.classList.remove('font-bold', 'opacity-100');
+                btnId?.classList.add('opacity-50');
+                document.documentElement.lang = "en";
+            }
+
+            localStorage.setItem('selectedLanguage', lang);
+        }
+
+
+        // --- SAAT HALAMAN DI-LOAD ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+            changeLanguage(savedLang);
+
+            // Logic Scroll Smooth Original Kamu
+            const ctaBtn = document.getElementById('ctaBtn');
+            if (ctaBtn) {
+                ctaBtn.addEventListener('click', () => {
+                    const section1 = document.getElementById('section1');
+                    if (section1) section1.scrollIntoView({ behavior: 'smooth' });
+                });
             }
         });
     </script>
