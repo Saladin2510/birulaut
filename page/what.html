@@ -25,19 +25,20 @@
 
 <body>
     <!-- Navbar -->
-    <nav id="navbar" class="navbar fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-
-        <div id="nav-container" class="flex items-center justify-between w-full px-7 md:px-24 py-4
-           bg-gradient-to-b from-black/50 to-transparent
-           text-white transition-all duration-300 flex-wrap">
+    <nav id="navbar"
+        class="navbar fixed top-0 left-0 right-0 z-50 flex justify-center p-0 md:text-white transition-all duration-300 bg-white border-white/20 shadow-md">
+        <div id="nav-container"
+            class="flex items-center justify-between w-full px-7 md:px-24 bg-transparent transition-all duration-300 flex-wrap">
 
             <!-- Logo -->
-            <img src="../assets/images/logo.svg" alt="Logo" class="w-14 h-14 md:w-16 md:h-16 reveal" />
+            <img src="../assets/images/logo-dark.svg" alt="Logo BiruLaut"
+                class="w-14 h-14 md:w-16 md:h-16 my-2 reveal" />
 
             <!-- Hamburger -->
-            <button id="hamburger" class="md:hidden text-white transition-transform duration-300"
+            <button id="hamburger"
+                class="transition-transform duration-300 ease-[cubic-bezier(0.16, 1, 0.3, 1)] md:hidden"
                 onclick="toggleMenu()">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 -960 960 960"
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 -960 960 960"
                     fill="currentColor">
                     <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
                 </svg>
@@ -46,14 +47,27 @@
             <!-- Menu -->
             <div id="menu-items" class="hidden w-full md:flex md:w-auto md:items-center md:gap-10 mt-6 md:mt-0">
 
-                <div class="flex flex-col md:flex-row gap-6 text-sm font-medium
-               text-gray-800 md:text-white">
+                <div
+                    class="flex flex-col md:flex-row gap-6 text-sm font-medium md:items-center pb-5 md:pb-0 text-black">
 
-                    <a href="../index.html" class="hover:text-[#457B9D] transition reveal delay-1">Home</a>
-                    <a href="#what" class="hover:text-[#457B9D] transition reveal delay-2">What</a>
-                    <a href="#inovation" class="hover:text-[#457B9D] transition reveal delay-3">Inovation</a>
-                    <a href="#project" class="hover:text-[#457B9D] transition reveal delay-4">Project Plans</a>
-                    <a href="#blog" class="hover:text-[#457B9D] transition reveal delay-5">BLOG</a>
+                    <a href="../index.html" data-en="Home" data-id="Beranda"
+                        class="lang-target hover:text-[#457B9D] transition reveal delay-1">Home</a>
+                    <a href="#what" data-en="About" data-id="Tentang"
+                        class="lang-target hover:text-[#457B9D] transition reveal delay-2">About</a>
+                    <a href="#inovation" data-en="Inovation" data-id="Inovasi"
+                        class="lang-target hover:text-[#457B9D] transition reveal delay-3">Inovation</a>
+                    <a href="#project" data-en="Project Plans" data-id="Rencana Proyek"
+                        class="lang-target hover:text-[#457B9D] transition reveal delay-4">Project Plans</a>
+                    <a href="#blog" data-en="BLOG" data-id="BLOG"
+                        class="lang-target hover:text-[#457B9D] transition reveal delay-5">BLOG</a>
+
+                    <div class="lang-switch flex items-center gap-2 md:pl-4 md:ml-2 reveal delay-6">
+                        <button onclick="changeLanguage('id')" id="btn-id"
+                            class="cursor-pointer hover:text-[#457B9D] text-xs opacity-50 transition">ID</button>
+                        <span class="lang-switch text-xs opacity-30">|</span>
+                        <button onclick="changeLanguage('en')" id="btn-en"
+                            class="cursor-pointer hover:text-[#457B9D] text-xs font-bold transition">EN</button>
+                    </div>
                 </div>
             </div>
 
@@ -75,20 +89,30 @@
             <div
                 class="relative z-10 h-full max-w-7xl mx-auto px-10 md:px-16 flex flex-col justify-center items-center text-center gap-10">
 
-                <h1 class="text-4xl md:text-5xl font-semibold reveal">
+                <h1 data-en="Protecting Blue Carbon Ecosystems" data-id="Perlindungan Ekosistem Karbon Biru"
+                    class="lang-target text-4xl md:text-5xl font-semibold reveal">
                     Protecting Blue Carbon Ecosystems
                 </h1>
 
-                <p class="max-w-3xl text-white/80 md:pb-15 reveal delay-1">
-                    We protect mangroves, seagrass, and coastal wetlands by empowering communities,
-                    driving conservation action, and supporting sustainable policies.
+                <p data-en="We protect mangroves, seagrass, and coastal wetlands by empowering communities, driving conservation action, and supporting sustainable policies."
+                    data-id="Kami melindungi mangrove, lamun, dan lahan basah pesisir dengan memberdayakan masyarakat, mendorong aksi konservasi, serta mendukung kebijakan yang berkelanjutan."
+                    class="lang-target max-w-3xl text-white/80 md:pb-15 reveal delay-1">We protect mangroves, seagrass,
+                    and coastal wetlands by empowering communities, driving conservation action, and supporting
+                    sustainable policies.
                 </p>
 
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-6 w-full">
-                    <div class="bg-white/10 p-6 rounded-xl reveal delay-2">Awareness</div>
-                    <div class="bg-white/10 p-6 rounded-xl reveal delay-3">Community Action</div>
-                    <div class="bg-white/10 p-6 rounded-xl reveal delay-4">Collaboration</div>
-                    <div class="bg-white/10 p-6 rounded-xl reveal delay-5">Policy Advocacy</div>
+                    <div data-en="Awareness" data-id="Kesadaran"
+                        class="lang-target bg-white/10 p-4 rounded-xl reveal delay-2">Awareness
+                    </div>
+                    <div data-en="Community" data-id="Komunitas"
+                        class="lang-target bg-white/10 p-4 rounded-xl reveal delay-3">Community
+                        Action</div>
+                    <div data-en="Collaboration" data-id="Kolaborasi"
+                        class="lang-target bg-white/10 p-4 rounded-xl reveal delay-4">
+                        Collaboration</div>
+                    <div data-en="Policy Advocacy" data-id="Advokasi Kebijakan"
+                        class="lang-target bg-white/10 p-4 rounded-xl reveal delay-5">Policy Advocacy</div>
                 </div>
 
             </div>
@@ -101,7 +125,8 @@
 
                 <!-- HEADER -->
                 <div class="flex justify-between items-start mb-20">
-                    <h2 class="text-4xl md:text-5xl font-semibold reveal">
+                    <h2 data-en="Why Blue Carbon Matters" data-id="Mengapa Karbon Biru Penting"
+                        class="lang-target text-4xl md:text-5xl font-semibold reveal">
                         Why Blue Carbon Matters
                     </h2>
 
@@ -116,10 +141,13 @@
                     <!-- ROW 1 -->
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                         <div class="reveal delay-1">
-                            <h3 class="text-xl font-semibold mb-2">
+                            <h3 data-en="Climate Impact" data-id="Dampak Iklim"
+                                class="lang-target text-xl font-semibold mb-2">
                                 Climate Impact
                             </h3>
-                            <p class="text-gray-600 max-w-md">
+                            <p data-en="Highly efficient carbon sinks supporting climate mitigation."
+                                data-id="Penyerap karbon yang sangat efisien dalam mendukung upaya mitigasi perubahan iklim."
+                                class="lang-target text-gray-600 max-w-md">
                                 Highly efficient carbon sinks supporting climate mitigation.
                             </p>
                         </div>
@@ -132,10 +160,13 @@
                     <!-- ROW 2 -->
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                         <div class="reveal delay-2">
-                            <h3 class="text-xl font-semibold mb-2">
+                            <h3 data-en="Local Economies" data-id="Ekonomi Lokal"
+                                class="lang-target text-xl font-semibold mb-2">
                                 Local Economies
                             </h3>
-                            <p class="text-gray-600 max-w-md">
+                            <p data-en="Sustaining fisheries, aquaculture, and ecotourism."
+                                data-id="Menopang perikanan, akuakultur, dan ekowisata yang berkelanjutan."
+                                class="lang-target text-gray-600 max-w-md">
                                 Sustaining fisheries, aquaculture, and ecotourism.
                             </p>
                         </div>
@@ -148,10 +179,13 @@
                     <!-- ROW 3 -->
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                         <div class="reveal delay-3">
-                            <h3 class="text-xl font-semibold mb-2">
+                            <h3 data-en="Community Protection" data-id="Perlindungan Masyarakat"
+                                class="lang-target text-xl font-semibold mb-2">
                                 Community Protection
                             </h3>
-                            <p class="text-gray-600 max-w-md">
+                            <p data-en="Natural defense against storms, erosion, and sea-level rise."
+                                data-id="Pertahanan alami terhadap badai, abrasi, dan kenaikan muka air laut."
+                                class="lang-target text-gray-600 max-w-md">
                                 Natural defense against storms, erosion, and sea-level rise.
                             </p>
                         </div>
@@ -173,43 +207,53 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 
                     <!-- LEFT : IMAGE + SHAPES -->
-                    <div class="relative">
+                    <div class="relative reveal">
                         <img src="../assets/images/section/6.svg" alt="Blue Carbon Action"
-                            class="w-full h-auto object-cover reveal ">
+                            class="w-full h-auto object-cover">
                     </div>
 
                     <!-- RIGHT : CONTENT -->
                     <div>
 
-                        <h2 class="text-4xl md:text-5xl font-semibold mb-12 reveal delay-1">
+                        <h2 data-en="How We Create Change" data-id="Cara Kami Menciptakan Perubahan"
+                            class="lang-target text-4xl md:text-5xl font-semibold mb-12 reveal delay-1">
                             How We Create Change
                         </h2>
 
                         <div class="space-y-10">
 
                             <div class="reveal delay-2">
-                                <h3 class="text-xl font-semibold mb-2">
+                                <h3 data-en="Inspire" data-id="Menginspirasi"
+                                    class="lang-target text-xl font-semibold mb-2">
                                     Inspire
                                 </h3>
-                                <p class="text-gray-600 max-w-lg">
+                                <p data-en="Raising awareness through education and storytelling."
+                                    data-id="Meningkatkan kesadaran melalui edukasi dan cerita lapangan."
+                                    class="lang-target text-gray-600 max-w-lg">
                                     Raising awareness through education and storytelling.
                                 </p>
                             </div>
 
                             <div class="reveal delay-3">
-                                <h3 class="text-xl font-semibold mb-2">
+                                <h3 data-en="Enable" data-id="Memungkinkan Aksi"
+                                    class="lang-target text-xl font-semibold mb-2">
                                     Enable
                                 </h3>
-                                <p class="text-gray-600 max-w-lg">
+                                <p data-en="Providing tools, training, and support for action."
+                                    data-id="Menyediakan sarana, pelatihan, dan dukungan untuk mendorong tindakan nyata."
+                                    class="lang-target text-gray-600 max-w-lg">
                                     Providing tools, training, and support for action.
                                 </p>
                             </div>
 
                             <div class="reveal delay-4">
-                                <h3 class="text-xl font-semibold mb-2">
+                                <h3 data-en="Deliver Impact" data-id="Mewujudkan Dampak"
+                                    class="lang-target text-xl font-semibold mb-2">
                                     Deliver Impact
                                 </h3>
-                                <p class="text-gray-600 max-w-lg">
+                                <p data-en="Community-led efforts with long-term sustainability."
+                                    data-id="Upaya berbasis masyarakat dengan keberlanjutan jangka panjang."
+                                    class="lang-target text-gray-600 max-w-lg">
                                     Community-led efforts with long-term sustainability.
                                 </p>
                             </div>
@@ -232,20 +276,27 @@
                     class="w-18 h-18 mb-15 mx-auto object-contain animate-spin-slow reveal">
 
                 <!-- Title -->
-                <h2 class="text-3xl md:text-4xl font-bold mb-6 reveal delay-1">
+                <h2 data-en="Collaboration & Networks" data-id="Kolaborasi & Jejaring"
+                    class="lang-target text-3xl md:text-4xl font-bold mb-6 reveal delay-1">
                     Collaboration & Networks
                 </h2>
 
                 <!-- Description -->
-                <p class="text-black/80 max-w-4xl mx-auto text-sm md:text-base leading-relaxed mb-14 reveal delay-2">
+                <p data-en="We connect communities, scientists, NGOs, and policymakers to share knowledge, resources, and best
+                    practices."
+                    data-id="Kami menghubungkan masyarakat, ilmuwan, LSM, dan pembuat kebijakan untuk berbagi pengetahuan, sumber daya, dan praktik terbaik."
+                    class="lang-target text-black/80 max-w-4xl mx-auto text-sm md:text-base leading-relaxed mb-14 reveal delay-2">
                     We connect communities, scientists, NGOs, and policymakers to share knowledge, resources, and best
                     practices.
                 </p>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto md:gap-20 text-white font-semibold">
-                    <div class="bg-[#1D3557] p-6 rounded-xl reveal delay-3">Knowledge Sharing</div>
-                    <div class="bg-[#1D3557] p-6 rounded-xl reveal delay-4">Resource Pooling</div>
-                    <div class="bg-[#1D3557] p-6 rounded-xl reveal delay-5">Best Practices</div>
+                    <div data-en="Knowledge Sharing" data-id="Berbagi Pengetahuan"
+                        class="lang-target bg-[#1D3557] p-6 rounded-xl reveal delay-3">Knowledge Sharing</div>
+                    <div data-en="Resource Pooling" data-id="Penghimpunan Sumber Daya"
+                        class="lang-target bg-[#1D3557] p-6 rounded-xl reveal delay-4">Resource Pooling</div>
+                    <div data-en="Best Practices" data-id="Praktik Terbaik"
+                        class="lang-target bg-[#1D3557] p-6 rounded-xl reveal delay-5">Best Practices</div>
                 </div>
 
             </div>
@@ -267,13 +318,16 @@
 
             <!-- Content -->
             <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4 reveal">
+                <h2 data-en="Policy & Advocacy" data-id="Kebijakan & Advokasi"
+                    class="lang-target text-4xl md:text-5xl font-bold mb-4 reveal">
                     Policy & Advocacy
                 </h2>
 
-                <p class="max-w-3xl mx-auto text-gray-700 text-sm md:text-base mb-20 reveal delay-1">
-                    We support evidence-based coastal policies by collaborating with governments,
-                    scientists, and local communities to protect vital ecosystems.
+                <p data-en="We support evidence-based coastal policies by collaborating with governments, scientists, and local communities to protect vital ecosystems."
+                    data-id="Kami mendukung kebijakan pesisir berbasis bukti melalui kolaborasi dengan pemerintah, ilmuwan, dan masyarakat lokal untuk melindungi ekosistem penting."
+                    class="lang-target max-w-3xl mx-auto text-gray-700 text-sm md:text-base mb-20 reveal delay-1">
+                    We support evidence-based coastal policies by collaborating with governments, scientists, and local
+                    communities to protect vital ecosystems.
                 </p>
 
                 <div class="flex justify-center reveal delay-2">
@@ -290,16 +344,21 @@
         <section class="relative py-20 bg-[#1D3557] text-white">
             <div class="max-w-7xl mx-auto px-6 md:px-12">
 
-                <h2 class="text-3xl font-semibold text-center mb-12 reveal">
+                <h2 data-en="Stories from the Coast" data-id="Cerita dari Pesisir"
+                    class="lang-target text-3xl font-semibold text-center mb-12 reveal">
                     Stories from the Coast
                 </h2>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <iframe class="w-full aspect-video rounded-xl reveal delay-1"
-                        src="https://www.youtube.com/embed/vCQW4D6r1AA?si=KDDTtpygkrBw-P5N" allowfullscreen></iframe>
+                        src="https://www.youtube.com/embed/vCQW4D6r1AA?si=KDDTtpygkrBw-P5N"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
 
                     <iframe class="w-full aspect-video rounded-xl reveal delay-2"
-                        src="https://www.youtube.com/embed/gZ14fJaaazU?si=i45z_zc83FD0wFrt" allowfullscreen></iframe>
+                        src="https://www.youtube.com/embed/gZ14fJaaazU?si=i45z_zc83FD0wFrt"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
                 </div>
 
             </div>
@@ -312,11 +371,11 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
                     <!-- LEFT : IMAGE -->
-                    <div class="relative flex justify-center lg:justify-start">
+                    <div class="relative flex justify-center lg:justify-start reveal">
 
                         <!-- Main Image -->
                         <img src="../assets/images/section/8.svg" alt="Roy Freude"
-                            class="relative z-10 w-full max-w-sm rounded-3xl object-cover reveal">
+                            class="relative z-10 w-full max-w-sm rounded-3xl object-cover">
                     </div>
 
                     <!-- RIGHT : CONTENT -->
@@ -326,9 +385,11 @@
                             Roy / Freude
                         </h3>
 
-                        <p class="text-gray-700 italic leading-relaxed max-w-xl mx-auto lg:mx-0 mb-10 reveal delay-2">
-                            “As a civil servant, it is my responsibility to guide and support communities
-                            in protecting and sustainably managing marine resources.”
+                        <p data-en="“As a civil servant, it is my responsibility to guide and support communities in protecting and sustainably managing marine resources.”"
+                            data-id="“Sebagai aparatur sipil negara, sudah menjadi tanggung jawab saya untuk membimbing dan mendampingi masyarakat dalam melindungi serta mengelola sumber daya kelautan secara berkelanjutan.”"
+                            class="lang-target text-gray-700 italic leading-relaxed max-w-xl mx-auto lg:mx-0 mb-10 reveal delay-2">
+                            “As a civil servant, it is my responsibility to guide and support communities in protecting
+                            and sustainably managing marine resources.”
                         </p>
 
                         <!-- SOCIAL ICONS -->
@@ -376,7 +437,8 @@
                         <h1 class="text-4xl md:text-7xl font-bold leading-tight mb-6 roboto reveal">#BiruLautku</h1>
 
                         <div class="text-sm space-y-1">
-                            <p class="font-semibold uppercase tracking-wide reveal delay-1">Contact:</p>
+                            <p data-en="Contact:" data-id="Kontak:"
+                                class="lang-target font-semibold uppercase tracking-wide reveal delay-1">Contact:</p>
                             <p class="reveal delay-2">+628121020813</p>
                             <p class="reveal delay-3">birulaut@birulaut.net</p>
                         </div>
@@ -393,15 +455,18 @@
 
                         <!-- Subscribe -->
                         <div class="text-right">
-                            <p class="text-sm mb-3 reveal delay-1">
+                            <p data-en="Support coastal ecosystem protection with us."
+                                data-id="Dukung perlindungan ekosistem pesisir bersama kami."
+                                class="lang-target text-sm mb-3 reveal delay-1">
                                 Support coastal ecosystem protection with us.
                             </p>
 
                             <div class="flex items-center gap-3">
-                                <input type="email" placeholder="Your email"
+                                <input type="email" data-placeholder-en="Your email" data-placeholder-id="Email Anda"
+                                    placeholder="Your email"
                                     class="px-4 py-2 rounded-md text-black text-sm focus:outline-none bg-white reveal delay-2" />
-                                <button
-                                    class="bg-[#4C7EA1] hover:bg-[#3b6d8f] px-4 py-2 rounded-md text-sm transition reveal delay-3">
+                                <button data-en="Subscribe" data-id="Berlangganan"
+                                    class="lang-target bg-[#4C7EA1] hover:bg-[#3b6d8f] px-4 py-2 rounded-md text-sm transition reveal delay-3">
                                     Subscribe
                                 </button>
                             </div>
@@ -431,7 +496,8 @@
                         </div>
 
                     </div>
-                    <p class="text-sm text-white/70">
+                    <p data-en="© 2026. All rights reserved." data-id="© 2026. Seluruh hak cipta dilindungi."
+                        class="lang-target text-sm text-white/70">
                         © 2026. All rights reserved.
                     </p>
                 </div>

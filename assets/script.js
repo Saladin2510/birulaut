@@ -66,3 +66,54 @@ const observer = new IntersectionObserver(
 );
 
 reveals.forEach(el => observer.observe(el));
+
+// --- LOGIC GANTI BAHASA ---
+function changeLanguage(lang) {
+    // TEXT & HTML
+    document.querySelectorAll('.lang-target').forEach(el => {
+        const newText = el.getAttribute(`data-${lang}`);
+        if (newText) el.innerHTML = newText;
+    });
+
+    // PLACEHOLDER INPUT
+    document.querySelectorAll('input[data-placeholder-en]').forEach(input => {
+        const placeholder = input.getAttribute(`data-placeholder-${lang}`);
+        if (placeholder) input.placeholder = placeholder;
+    });
+
+    // BUTTON STYLE & HTML LANG (tetap)
+    const btnId = document.getElementById('btn-id');
+    const btnEn = document.getElementById('btn-en');
+
+    if (lang === 'id') {
+        btnId?.classList.add('font-bold', 'opacity-100');
+        btnId?.classList.remove('opacity-50');
+        btnEn?.classList.remove('font-bold', 'opacity-100');
+        btnEn?.classList.add('opacity-50');
+        document.documentElement.lang = "id";
+    } else {
+        btnEn?.classList.add('font-bold', 'opacity-100');
+        btnEn?.classList.remove('opacity-50');
+        btnId?.classList.remove('font-bold', 'opacity-100');
+        btnId?.classList.add('opacity-50');
+        document.documentElement.lang = "en";
+    }
+
+    localStorage.setItem('selectedLanguage', lang);
+}
+
+
+// --- SAAT HALAMAN DI-LOAD ---
+document.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+    changeLanguage(savedLang);
+
+    // Logic Scroll Smooth Original Kamu
+    const ctaBtn = document.getElementById('ctaBtn');
+    if (ctaBtn) {
+        ctaBtn.addEventListener('click', () => {
+            const section1 = document.getElementById('section1');
+            if (section1) section1.scrollIntoView({ behavior: 'smooth' });
+        });
+    }
+});
